@@ -57,7 +57,7 @@ function runCredit() {
         creditContainer.style.display = 'none';
         // Hiển thị phần tiếp theo sau credit (nếu có)
         document.getElementById('game-container').style.display = 'block';
-    }, 1000); // Đổi giá trị này tùy vào thời gian chạy của credit
+    }, 10000); // Đổi giá trị này tùy vào thời gian chạy của credit
 }
 function showCrushGuess() {
     document.getElementById('result').innerText = 'Số phu thê chứ gì mà phải đoán :))';
