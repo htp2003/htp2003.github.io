@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Cloudy</title>
+</head>
+
+<body>
+
+    <div id="main-container">
+        <div id="question-container">
+            <h2>Em có muốn... đi bộ với AI không?</h2>
+            <button class="option-button" onclick="showOptions('yes')">Có</button>
+            <button id="noButton" class="option-button" onclick="hideButton()">Không</button>
+        </div>
+
+        <div id="options-container">
+            <h2>Chúng ta sẽ:</h2>
+            <ul class="option-list">
+                <li>
+                    <input type="checkbox" id="activity1" name="activity" value="Di choi">
+                    <label for="activity1">
+                        <img src="eat.jpg" alt="Activity 1">
+                        <h3>Ăn?</h3>
+                    </label>
+                </li>
+                <li>
+                    <input type="checkbox" id="activity2" name="activity" value="Di choi">
+                    <label for="activity2">
+                        <img src="drink.jpg" alt="Activity 2">
+                        <h3>Uống</h3>
+                    </label>
+                </li>
+                <li>
+                    <input type="checkbox" id="activity3" name="activity" value="Di choi">
+                    <label for="activity3">
+                        <img src="walk.jpg" alt="Activity 3">
+                        <h3>Đi bộ</h3>
+                    </label>
+                </li>
+                <li>
+                    <input type="checkbox" id="activity4" name="activity" value="Di choi">
+                    <label for="activity4">
+                        <img src="fly.jpg" alt="Activity 4">
+                        <h3>Bay?</h3>
+                    </label>
+                </li>
+                <li>
+                    <input type="checkbox" id="activity5" name="activity" value="Di choi">
+                    <label for="activity5">
+                        <img src="sing.jpg" alt="Activity 1">
+                        <h3>Hát</h3>
+                    </label>
+                </li>
+                <li>
+                    <input type="checkbox" id="activity6" name="activity" value="Di choi">
+                    <label for="activity6">
+                        <img src="wild.jpg" alt="Activity 2">
+                        <h3>Khám phá nhà hoang?</h3>
+                    </label>
+                </li>
+
+                <!-- Thêm các checkbox và label khác nếu cần -->
+            </ul>
+            <button class="option-button" onclick="showImages()">Oke =))</button>
+        </div>
+
+
+
+
+
+        <div id="image-container">
+            <!-- Thêm các flip card theo yêu cầu của bạn -->
+            <!-- horizontal -->
+            <h1>Khum muốn noái nhiều</h1>
+
+            <div class="flip">
+                <div class="front" style="background-image: url(meo.jpg)">
+                    <h1 class="text-shadow">Chúc</hi>
+                </div>
+                <div class="back">
+
+                    <p>Được biết đến em là một vinh dự to lớn đối với anh 😺</p>
+                </div>
+            </div>
+            <div class="flip">
+                <div class="front" style="background-image: url(van0.jpg)">
+                    <h1 class="text-shadow">Em</hi>
+                </div>
+                <div class="back">
+
+                    <p>Cảm ơn vì đã lắng nghe những lời than phiền và mấy câu đùa nhạt toẹt của anh 😂</p>
+                </div>
+            </div>
+            <div class="flip">
+                <div class="front" style="background-image: url(van1.jpg)">
+                    <h1 class="text-shadow">Một</hi>
+                </div>
+                <div class="back">
+
+                    <p>Năm qua là một năm khó khăn nhỉ? </p>
+                </div>
+            </div>
+
+            <br>
+            <br>
+
+            <!-- vertical -->
+
+
+            <div class="flip flip-vertical">
+                <div class="front" style="background-image: url(van2.jpg)">
+                    <h1 class="text-shadow">Valentine </hi>
+                </div>
+                <div class="back">
+
+                    <p>Nhắn tin hoặc chơi game với em thì mọi buồn phiền cook đi hết</p>
+                </div>
+            </div>
+            <div class="flip flip-vertical">
+                <div class="front" style="background-image: url(van3.PNG)">
+
+                    <h1 class="text-shadow">Hạnh</hi>
+                </div>
+                <div class="back">
+
+                    <p>You're one of the most beautiful girls I've met</p>
+                </div>
+            </div>
+            <div class="flip flip-vertical">
+                <div class="front" style="background-image: url(van4.jpg)">
+                    <h1 class="text-shadow">Phúc ❤️</hi>
+                </div>
+                <div class="back">
+
+                    <p>Nhưng mà. Tại sao anh lại sợ mất em khi mà em chưa từng là của riêng anh?</p>
+                </div>
+            </div>
+            <h4><a href="https://www.instagram.com/phat_middd/" target="_blank" style="color: black;">@phat_middd </a>
+            </h4>
+            <div id="ending-container">
+                <button class="option-button" onclick="runCredit()">Tiếp</button>
+            </div>
+
+        </div>
+
+
+
+
+    </div>
+    <div id="credit-container" class="hidden">
+        <!-- Dòng credit sẽ hiển thị khi cần -->
+        <div id="credit-content">
+            <h1 style="font-weight: bold;">Hết ròi</h1>
+            <p style="font-size: 20px;">Cảm ơn vì đã ghé quaa :3</p>
+            <p style="font-size: 20px;">Cảm ơn vì đã kiên nhẫn</p>
+            <p style="font-size: 20px;">Chúc cho em luôn mạnh mẽ, vững vàng hơn trong cuộc sống.
+                Năm mới đến rồi, hãy gạt bỏ mọi ưu phiền và đón một năm thật ý nghĩa nhé. Hãy yên tâm vì lúc nào
+                cũng có anh bên cạnh ủng hộ em. ILY ❤ </p>
+
+            <!-- Thêm các dòng credit khác nếu cần -->
+        </div>
+    </div>
+
+    <div id="game-container" class="hidden">
+        <h2 style="font-weight: bold;">Đoán số</h2>
+        <p style="font-size: 20px;">Em hãy thử đoán một số giữa 1 và 100 đi</p>
+        <input type="number" id="userGuess" placeholder="Your Guess">
+        <button class="option-button" onclick="showCrushGuess()">OK</button>
+        <p style="font-size: 20px;" id="result"></p>
+        <p style="font-size: 20px;" id="result-after"></p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
