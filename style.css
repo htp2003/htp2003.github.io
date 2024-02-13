@@ -372,3 +372,20 @@ h3 {
         margin-bottom: 10px; /* Điều chỉnh khoảng cách giữa các mục */
     }
 }
+/* CSS chung cho mọi kích thước màn hình */
+
+/* CSS cho màn hình có chiều rộng tối đa 600px (điện thoại di động) */
+@media only screen and (max-width: 600px) {
+    /* Container chứa các flip cards */
+    .flip {
+        display: flex;
+        flex-direction: column; /* Chuyển từ hiển thị ngang sang dọc */
+        align-items: center; /* Căn giữa theo chiều ngang */
+        margin-bottom: 20px; /* Điều chỉnh khoảng cách giữa các flip card */
+    }
+
+    /* Style cho mỗi flip card */
+    .flip .front, .flip .back {
+        width: 100%; /* Chiều rộng tối đa là 100% của container cha */
+    }
+}
