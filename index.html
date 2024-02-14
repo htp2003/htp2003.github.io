@@ -5,10 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+        integrity="sha384-rbs5N5O5XCN58vNkE6Zgk3f3BbPahg3F5SkN9zAKFNaXHH380WiC8M+BEj87Z4S+r" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <title>Cloudy</title>
 </head>
 
 <body>
+
 
     <div id="main-container">
         <div id="question-container">
@@ -63,7 +68,7 @@
                     </label>
                 </li>
 
-                <!-- Thêm các checkbox và label khác nếu cần -->
+
             </ul>
             <button class="option-button" onclick="showImages()">Oke =))</button>
         </div>
@@ -73,10 +78,11 @@
 
 
         <div id="image-container">
-            <!-- Thêm các flip card theo yêu cầu của bạn -->
-            <!-- horizontal -->
-            <h1>Khum muốn noái nhiều</h1>
 
+            <!-- horizontal -->
+
+            <h1 class="main-mess">Khum muốn noái nhiều</h1>
+            <h2 class="muted">Khum muốn noái nhiều</h2>
             <div class="flip">
                 <div class="front" style="background-image: url(meo.jpg)">
                     <h1 class="text-shadow">Chúc</hi>
@@ -139,7 +145,8 @@
                     <p>Nhưng mà. Tại sao anh lại sợ mất em khi mà em chưa từng là của riêng anh?</p>
                 </div>
             </div>
-            <h4><a href="https://www.instagram.com/phat_middd/" target="_blank" style="color: black;">@phat_middd </a>
+            <h4><a href="https://www.instagram.com/phat_middd/" target="_blank" style="color: black;">@phat_middd
+                </a>
             </h4>
             <div id="ending-container">
                 <button class="option-button" onclick="runCredit()">Tiếp</button>
@@ -157,23 +164,37 @@
             <h1 style="font-weight: bold;">Hết ròi</h1>
             <p style="font-size: 20px;">Cảm ơn vì đã ghé quaa :3</p>
             <p style="font-size: 20px;">Cảm ơn vì đã kiên nhẫn</p>
-            <p style="font-size: 20px;">Chúc cho em luôn mạnh mẽ, vững vàng hơn trong cuộc sống.
-                Năm mới đến rồi, hãy gạt bỏ mọi ưu phiền và đón một năm thật ý nghĩa nhé. Hãy yên tâm vì lúc nào
-                cũng có anh bên cạnh ủng hộ em. ILY ❤ </p>
+            <p style="font-size: 20px;">Chúc cho em luôn mạnh mẽ, vững vàng hơn trong cuộc sống.</p>
+            <p style="font-size: 20px;">Năm mới đến rồi, hãy gạt bỏ mọi ưu phiền và đón một năm thật ý nghĩa nhé.</p>
+            <p style="font-size: 20px;">Hãy yên tâm vì lúc nào
+                cũng có anh bên cạnh ủng hộ em.</p>
 
+            <p style="font-size: 20px;"></p>
+            <p style="font-size: 20px;"></p>
+
+            <p style="font-size: 20px;"> 520 ❤</p>
             <!-- Thêm các dòng credit khác nếu cần -->
         </div>
     </div>
 
     <div id="game-container" class="hidden">
-        <h2 style="font-weight: bold;">Đoán số</h2>
-        <p style="font-size: 20px;">Em hãy thử đoán một số giữa 1 và 100 đi</p>
-        <input type="number" id="userGuess" placeholder="Your Guess">
-        <button class="option-button" onclick="showCrushGuess()">OK</button>
+        <h2 id="doanso" style="font-weight: bold;">Đoán số</h2>
+
+        <p id="answer" style="font-size: 20px;">Em hãy thử đoán một số giữa 1 và 100 đi</p>
+        <input type="number" id="userGuess" name="guess2" placeholder="Your Guess">
+        <button class="option-button" id="showbtn" onclick="showCrushGuess()">OK</button>
+
+
         <p style="font-size: 20px;" id="result"></p>
         <p style="font-size: 20px;" id="result-after"></p>
     </div>
+    <div id="snowfall-container">
 
+    </div>
+    <div id="rose-container">
+        <img src="rose.png" alt="rose" id="rose">
+        <h1 style="color: lavender;" id="fu">For u</h1>
+    </div>
     <script src="script.js"></script>
 </body>
 

@@ -120,7 +120,7 @@ body {
 /* Thêm các style cho flip card */
 .flip {
   perspective: 1000px;
-  display: inline-block;
+  display: list-item;
   margin: 10px;
 }
 
@@ -282,6 +282,7 @@ h1 {
   display: flex;
   flex-direction: column;
   align-items: center;
+  height: 243px;
 }
 
 .option-list label img {
@@ -309,6 +310,9 @@ h3 {
   font-weight: bold;
 }
 
+.muted {
+  display: none;
+}
 
 /* Thêm vào phần cuối của file CSS */
 
@@ -358,34 +362,85 @@ h3 {
 #userGuess::placeholder {
   color: #888;
 }
-@media only screen and (max-width: 600px) {
-    /* Container chứa các checkbox và flip cards */
-    .option-list {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between; /* Điều chỉnh theo ý muốn của bạn */
-    }
 
-    /* Style cho mỗi mục checkbox và flip card */
-    .option-list li {
-        width: 48%; /* Điều chỉnh kích thước chiều rộng của mỗi mục */
-        margin-bottom: 10px; /* Điều chỉnh khoảng cách giữa các mục */
-    }
+@media only screen and (max-width: 600px) {
+  .option-list li {
+    width: 48%;
+    margin-bottom: 10px;
+  }
+
+  .main-mess {
+    padding-bottom: 1100px;
+  }
+
+  .muted {
+    display: block;
+  }
+
+  .flip {
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  .flip>.front,
+  .flip>.back {
+    width: 100%;
+    height: 0;
+    padding-bottom: 75%;
+  }
+
+  .option-list li:first-child .flip {
+    margin-top: 0;
+    margin-bottom: 10px;
+  }
 }
-/* CSS chung cho mọi kích thước màn hình */
 
-/* CSS cho màn hình có chiều rộng tối đa 600px (điện thoại di động) */
-@media only screen and (max-width: 600px) {
-    /* Container chứa các flip cards */
-    .flip {
-        display: flex;
-        flex-direction: column; /* Chuyển từ hiển thị ngang sang dọc */
-        align-items: center; /* Căn giữa theo chiều ngang */
-        margin-bottom: 20px; /* Điều chỉnh khoảng cách giữa các flip card */
-    }
 
-    /* Style cho mỗi flip card */
-    .flip .front, .flip .back {
-        width: 100%; /* Chiều rộng tối đa là 100% của container cha */
-    }
+
+
+#snowfall-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 9999;
+}
+
+.snowflake {
+  position: absolute;
+  background: #e329b1;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  opacity: 0.8;
+  animation: fall linear infinite;
+}
+
+@keyframes fall {
+  0% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(100vh);
+  }
+}
+
+#rose {
+  display: none;
+  position: fixed;
+  width: 220px;
+  height: 80%;
+}
+
+#fu {
+  display: none;
+}
+
+#rose-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  /* Đảm bảo chiều cao là 100% của viewport */
 }

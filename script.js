@@ -21,51 +21,87 @@ function flipCard(card) {
     card.style.transform = 'rotateX(180deg)';
 }
 
-// Thêm vào phần cuối của file script.js
+
 
 function runCredit() {
+    var backgroundMusic = new Audio('mr.mp3');
+    backgroundMusic.volume = 0.5;
+    backgroundMusic.loop = true;
+    backgroundMusic.play();
     var endingContainer = document.getElementById('ending-container');
     var creditContainer = document.getElementById('credit-container');
     var creditContent = document.getElementById('credit-content');
 
-    // Ẩn phần hình ảnh và hiển thị phần credit
+
     document.getElementById('image-container').style.display = 'none';
     endingContainer.style.display = 'none';
     creditContainer.style.display = 'block';
 
-    // Lấy chiều cao của nội dung credit
     var creditContentHeight = creditContent.offsetHeight;
 
-    // Chạy dòng credit từ dưới đáy lên
+
     creditContent.style.transform = 'translateY(100%)';
     creditContent.style.transition = 'transform 30s linear';
-    // Đặt giá trị scroll amount sao cho credit chạy hết chiều cao của nội dung
-    var scrollAmount = creditContentHeight / 10; // Có thể điều chỉnh theo ý muốn
 
-    // Chạy dòng credit từ dưới lên
+    var scrollAmount = creditContentHeight / 10;
+
+
     creditContent.style.transform = 'translateY(' + (-creditContentHeight) + 'px)';
-    creditContent.style.transition = 'transform 15s linear';
+    creditContent.style.transition = 'transform 19s linear';
 
-    // Khi credit chạy xong, thực hiện hành động tiếp theo
+
     setTimeout(function () {
         creditContent.style.transform = 'translateY(0)';
         creditContent.style.transition = 'none';
 
-        // Thêm các dòng credit khác nếu cần
 
-        // Ẩn phần credit và hiển thị phần tiếp theo sau credit
         creditContainer.style.display = 'none';
-        // Hiển thị phần tiếp theo sau credit (nếu có)
+
         document.getElementById('game-container').style.display = 'block';
-    }, 15000); // Đổi giá trị này tùy vào thời gian chạy của credit
+    }, 19000);
 }
 function showCrushGuess() {
-    document.getElementById('result').innerText = 'Số phu thê chứ gì mà phải đoán :))';
-    setTimeout(function () {
-        document.getElementById('result-after').innerText = 'Đợi 3s nha...';
-    }, 2000);
 
+
+    document.getElementById('result').innerText = 'Em đoán đúng rồi';
+    document.getElementById('showbtn').style.display = 'none';
+    document.getElementById('userGuess').style.display = 'none';
     setTimeout(function () {
-        window.location.href = 'https://www.youtube.com/watch?v=jV5j5iKIL8s';
-    }, 6000);
+        document.getElementById('result-after').innerText = '🎵 ~';
+        createSnowflake();
+        setTimeout(hideElementsAndShowRose, 5000);
+    }, 1000);
+
+
+
+    document.getElementById('answer').innerHTML = 'Đáp án: Số phu thê';
+    document.getElementById('answer').style.color = 'green';
+
+    return false;
+}
+
+
+function createSnowflake() {
+    const snowfallContainer = document.getElementById('snowfall-container');
+
+    for (let i = 0; i < 100; i++) {
+        const snowflake = document.createElement('div');
+        snowflake.className = 'snowflake';
+        snowflake.style.left = `${Math.random() * 100}vw`; // Random vị trí trái
+        snowflake.style.animationDuration = `${Math.random() * 2 + 1}s`; // Random thời gian rơi
+        snowfallContainer.appendChild(snowflake);
+    }
+}
+
+function hideElementsAndShowRose() {
+    // Ẩn các phần tử khác
+    document.getElementById('result').style.display = 'none';
+    document.getElementById('result-after').style.display = 'none';
+    document.getElementById('userGuess').style.display = 'none';
+    document.getElementById('showbtn').style.display = 'none';
+    document.getElementById('doanso').style.display = 'none';
+    document.getElementById('answer').style.display = 'none';
+    document.body.style.backgroundImage = 'url(cloud.jpg)';    // Hiển thị bông hoa hồng và âm nhạc nền
+    document.getElementById('rose').style.display = 'block';
+    document.getElementById('fu').style.display = 'block';
 }
